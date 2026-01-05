@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>موقع منهل</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        /* تنسيق الكلمات الموزعة */
+        .random-text {
+            position: absolute;
+            color: #333; /* لون رمادي غامق ليظهر بشكل خافت خلفية سوداء */
+            font-size: 1.2rem;
+            user-select: none;
+        }
+
+        /* التنسيق المركزي */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="background-words"></div>
+
+    <div class="container">
+        <h1>منهل</h1>
+        <button onclick="addWater()">كل كبسة تجيب منهل ماء</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // توزيع الكلمات في الخلفية
+        const bgContainer = document.getElementById('background-words');
+        const word = "زنجي";
+        
+        for (let i = 0; i < 20; i++) {
+            const span = document.createElement('span');
+            span.innerText = word;
+            span.className = 'random-text';
+            span.style.top = Math.random() * 90 + 'vh';
+            span.style.left = Math.random() * 90 + 'vw';
+            bgContainer.appendChild(span);
+        }
+
+        // وظيفة الزر
+        let count = 0;
+        function addWater() {
+            count++;
+            document.getElementById('result').innerText = "🚰 منهل ماء رقم: " + count;
+        }
+    </script>
+</body>
+</html>
