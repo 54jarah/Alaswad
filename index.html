@@ -18,8 +18,8 @@
         /* تنسيق الكلمات الموزعة في الخلفية */
         .random-text {
             position: absolute;
-            color: #1a1a1a; /* لون داكن جداً ليظهر بشكل خافت */
-            font-size: 4rem; /* خط كبير للكلمات الموزعة */
+            color: #1a1a1a;
+            font-size: 4rem;
             font-weight: bold;
             user-select: none;
             z-index: 1;
@@ -37,7 +37,7 @@
         }
 
         h1 {
-            font-size: 6rem; /* خط كبير جداً لمنهل */
+            font-size: 6rem;
             margin-bottom: 30px;
             color: white;
         }
@@ -59,7 +59,7 @@
 
         #result {
             margin-top: 40px;
-            font-size: 3.5rem; /* خط كبير جداً للنتيجة */
+            font-size: 3.5rem;
             color: #00d4ff;
             font-weight: bold;
             min-height: 1.2em;
@@ -79,7 +79,7 @@
     <script>
         // توزيع الكلمات في الخلفية بشكل عشوائي
         const bgContainer = document.getElementById('background-words');
-        const word = "منهل"; 
+        const word = "العبد"; 
         
         for (let i = 0; i < 20; i++) {
             const span = document.createElement('span');
@@ -92,7 +92,7 @@
 
         // وظيفة الزر عند الكبس
         function giveWater() {
-            document.getElementById('result').innerText = "الرخيص جابلك ماء! 💧";
+            document.getElementById('result').innerText = "الرخيص جابلك ماء!";
         }
     </script>
 </body>
